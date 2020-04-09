@@ -1,6 +1,7 @@
 import {abcRender} from "./ts/markdown/abcRender";
 import {chartRender} from "./ts/markdown/chartRender";
 import {codeRender} from "./ts/markdown/codeRender";
+import {dberRender} from "./ts/markdown/dberRender";
 import {graphvizRender} from "./ts/markdown/graphvizRender";
 import {highlightRender} from "./ts/markdown/highlightRender";
 import {mathRender} from "./ts/markdown/mathRender";
@@ -14,6 +15,8 @@ class Vditor {
     public static codeRender = codeRender;
     /** 对 graphviz 进行渲染 */
     public static graphvizRender = graphvizRender;
+    /** 对 dber 进行渲染 */
+    public static dberRender = dberRender;
     /** 为 element 中的代码块进行高亮渲染 */
     public static highlightRender = highlightRender;
     /** 对数学公式进行渲染 */

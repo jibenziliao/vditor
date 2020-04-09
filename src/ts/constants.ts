@@ -12,6 +12,7 @@ export abstract class Constants {
         "mermaid",
         "echarts",
         "graphviz",
+        "dber",
         "apache",
         "bash",
         "cs",

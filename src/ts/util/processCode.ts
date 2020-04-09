@@ -1,6 +1,7 @@
 import {abcRender} from "../markdown/abcRender";
 import {chartRender} from "../markdown/chartRender";
 import {codeRender} from "../markdown/codeRender";
+import {dberRender} from "../markdown/dberRender";
 import {graphvizRender} from "../markdown/graphvizRender";
 import {highlightRender} from "../markdown/highlightRender";
 import {mathRender} from "../markdown/mathRender";
@@ -61,6 +62,10 @@ export const processCodeRender = (previewPanel: HTMLElement, vditor: IVditor) =>
         abcRender(previewPanel, vditor.options.cdn);
     } else if (language === "mermaid") {
         mermaidRender(previewPanel, `.vditor-${vditor.currentMode}__preview .language-mermaid`, vditor.options.cdn);
+    } else if (language === "dber") {
+        dberRender(previewPanel, `.vditor-${vditor.currentMode}__preview .language-dber`, vditor.options.cdn);
+    } else if (language === "uier") {
+      // TODO: urRender()
     } else if (language === "echarts") {
         chartRender(previewPanel, vditor.options.cdn);
     } else if (language === "graphviz") {

@@ -36,7 +36,8 @@ export const highlightRender = (hljsOption?: IHljs, element: HTMLElement | Docum
     addScript(`${cdn}/dist/js/highlight.js/highlight.pack.js`, "vditorHljsScript").then(() => {
         element.querySelectorAll("pre > code").forEach((block) => {
             if (block.classList.contains("language-mermaid") || block.classList.contains("language-echarts")
-                || block.classList.contains("language-abc") || block.classList.contains("language-graphviz")) {
+                || block.classList.contains("language-abc") || block.classList.contains("language-graphviz")
+                || block.classList.contains("language-dber")) {
                 return;
             }
             hljs.highlightBlock(block);

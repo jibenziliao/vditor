@@ -4,6 +4,7 @@ import {abcRender} from "./abcRender";
 import {anchorRender} from "./anchorRender";
 import {chartRender} from "./chartRender";
 import {codeRender} from "./codeRender";
+import {dberRender} from "./dberRender";
 import {graphvizRender} from "./graphvizRender";
 import {highlightRender} from "./highlightRender";
 import {mathRender} from "./mathRender";
@@ -101,6 +102,7 @@ export const previewRender = async (previewElement: HTMLDivElement, markdown: st
         cdn: mergedOptions.cdn,
         math: mergedOptions.math,
     });
+    dberRender(previewElement, ".language-dber", mergedOptions.cdn);
     mermaidRender(previewElement, ".language-mermaid", mergedOptions.cdn);
     graphvizRender(previewElement, mergedOptions.cdn);
     chartRender(previewElement, mergedOptions.cdn);
