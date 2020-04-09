@@ -2,13 +2,13 @@ import {i18n} from "../i18n/index";
 import {abcRender} from "../markdown/abcRender";
 import {chartRender} from "../markdown/chartRender";
 import {codeRender} from "../markdown/codeRender";
+import { dberRender } from "../markdown/dberRender";
 import {graphvizRender} from "../markdown/graphvizRender";
 import {highlightRender} from "../markdown/highlightRender";
 import {mathRender} from "../markdown/mathRender";
 import {mediaRender} from "../markdown/mediaRender";
 import {mermaidRender} from "../markdown/mermaidRender";
 import {getMarkdown} from "../util/getMarkdown";
-import { dberRender } from "../markdown/dberRender";
 
 export class Preview {
     public element: HTMLElement;
