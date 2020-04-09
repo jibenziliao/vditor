@@ -8,6 +8,7 @@ import {mathRender} from "../markdown/mathRender";
 import {mediaRender} from "../markdown/mediaRender";
 import {mermaidRender} from "../markdown/mermaidRender";
 import {getMarkdown} from "../util/getMarkdown";
+import { dberRender } from "../markdown/dberRender";
 
 export class Preview {
     public element: HTMLElement;
@@ -108,6 +109,7 @@ export class Preview {
             cdn: vditor.options.cdn,
             math: vditor.options.preview.math,
         });
+        dberRender(vditor.preview.element.children[0] as HTMLElement, ".language-dber", vditor.options.cdn);
         mermaidRender(vditor.preview.element.children[0] as HTMLElement, ".language-mermaid", vditor.options.cdn);
         graphvizRender(vditor.preview.element.children[0] as HTMLElement, vditor.options.cdn);
         chartRender(vditor.preview.element.children[0] as HTMLElement, vditor.options.cdn);
