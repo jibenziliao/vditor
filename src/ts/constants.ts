@@ -13,6 +13,7 @@ export abstract class Constants {
         "echarts",
         "graphviz",
         "dber",
+        "uier",
         "apache",
         "bash",
         "cs",

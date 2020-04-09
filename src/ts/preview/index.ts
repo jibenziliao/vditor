@@ -8,6 +8,7 @@ import {highlightRender} from "../markdown/highlightRender";
 import {mathRender} from "../markdown/mathRender";
 import {mediaRender} from "../markdown/mediaRender";
 import {mermaidRender} from "../markdown/mermaidRender";
+import {uierRender} from "../markdown/uierRender";
 import {getMarkdown} from "../util/getMarkdown";
 
 export class Preview {
@@ -109,6 +110,7 @@ export class Preview {
             cdn: vditor.options.cdn,
             math: vditor.options.preview.math,
         });
+        uierRender(vditor.preview.element.children[0] as HTMLElement, ".language-uier", vditor.options.cdn);
         dberRender(vditor.preview.element.children[0] as HTMLElement, ".language-dber", vditor.options.cdn);
         mermaidRender(vditor.preview.element.children[0] as HTMLElement, ".language-mermaid", vditor.options.cdn);
         graphvizRender(vditor.preview.element.children[0] as HTMLElement, vditor.options.cdn);

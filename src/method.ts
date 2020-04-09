@@ -9,12 +9,15 @@ import {mediaRender} from "./ts/markdown/mediaRender";
 import {mermaidRender} from "./ts/markdown/mermaidRender";
 import {md2html, previewRender} from "./ts/markdown/previewRender";
 import {speechRender} from "./ts/markdown/speechRender";
+import {uierRender} from "./ts/markdown/uierRender";
 class Vditor {
 
     /** 为 element 中的代码块添加复制按钮 */
     public static codeRender = codeRender;
     /** 对 graphviz 进行渲染 */
     public static graphvizRender = graphvizRender;
+    /** 对 uier 进行渲染 */
+    public static uierRender = uierRender;
     /** 对 dber 进行渲染 */
     public static dberRender = dberRender;
     /** 为 element 中的代码块进行高亮渲染 */

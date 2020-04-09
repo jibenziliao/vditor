@@ -6,6 +6,7 @@ import {graphvizRender} from "../markdown/graphvizRender";
 import {highlightRender} from "../markdown/highlightRender";
 import {mathRender} from "../markdown/mathRender";
 import {mermaidRender} from "../markdown/mermaidRender";
+import {uierRender} from "../markdown/uierRender";
 
 export const processPasteCode = (html: string, text: string, type = "sv") => {
     const tempElement = document.createElement("div");
@@ -65,7 +66,7 @@ export const processCodeRender = (previewPanel: HTMLElement, vditor: IVditor) =>
     } else if (language === "dber") {
         dberRender(previewPanel, `.vditor-${vditor.currentMode}__preview .language-dber`, vditor.options.cdn);
     } else if (language === "uier") {
-      // TODO: urRender()
+        uierRender(previewPanel, `.vditor-${vditor.currentMode}__preview .language-uier`, vditor.options.cdn);
     } else if (language === "echarts") {
         chartRender(previewPanel, vditor.options.cdn);
     } else if (language === "graphviz") {

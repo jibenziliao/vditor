@@ -6,7 +6,7 @@ export const codeRender = (element: HTMLElement, lang: (keyof II18nLang) = "zh_C
     element.querySelectorAll("pre > code").forEach((e: HTMLElement, index: number) => {
         if (e.classList.contains("language-mermaid") || e.classList.contains("language-echarts")
             || e.classList.contains("language-abc") || e.classList.contains("language-graphviz")
-            || e.classList.contains("language-dber")) {
+            || e.classList.contains("language-dber") || e.classList.contains("language-uier")) {
             return;
         }
 

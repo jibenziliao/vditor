@@ -12,6 +12,7 @@ import {mediaRender} from "./mediaRender";
 import {mermaidRender} from "./mermaidRender";
 import {setLute} from "./setLute";
 import {speechRender} from "./speechRender";
+import {uierRender} from "./uierRender";
 
 const mergeOptions = (options?: IPreviewOptions) => {
     const defaultOption = {
@@ -102,6 +103,7 @@ export const previewRender = async (previewElement: HTMLDivElement, markdown: st
         cdn: mergedOptions.cdn,
         math: mergedOptions.math,
     });
+    uierRender(previewElement, ".language-uier", mergedOptions.cdn);
     dberRender(previewElement, ".language-dber", mergedOptions.cdn);
     mermaidRender(previewElement, ".language-mermaid", mergedOptions.cdn);
     graphvizRender(previewElement, mergedOptions.cdn);
